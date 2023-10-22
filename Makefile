@@ -1,22 +1,32 @@
 install:
 	pip install --upgrade pip &&\
-		pip install -r requirements.txt
+		pip install -r python/requirements.txt
 
-test:
-	python -m pytest -vv --cov=sorc.main
+test_python:
+	python -m pytest -vv --cov=python
 
-format:	
-	black sorc/*.py 
+format_python:	
+	black python/*.py 
 
-lint:
-	pylint --disable=R,C --ignore-patterns=test_.*?py sorc/*.py
+lint_python:
+	pylint --disable=R,C --ignore-patterns=test_.*?py python/*.py
 
 container-lint:
 	docker run --rm -i hadolint/hadolint < Dockerfile
 
-refactor: format lint
+refactor_python: format_python lint_python
 
-deploy:
-	#deploy goes here
-		
-all: install lint test format deploy
+build_rust:
+	cd rust && cargo build
+
+run_rust:
+	cd rust && cargo run
+
+test_rust:
+	cd rust && cargo test
+
+build_and_run: build_rust run_rust
+
+test: #no testing
+
+all: install refactor_python build_and_run test

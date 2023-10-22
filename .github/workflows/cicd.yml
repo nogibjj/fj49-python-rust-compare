@@ -11,14 +11,24 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - name: install packages
-        run: make install
-      - name: lint
-        run: make lint
-      - name: test
-        run: make test
-      - name: format
-        run: make format
-      - name: deploy
-        run: make deploy
+      - uses: actions/checkout@v2
+
+      # Install Python dependencies
+      - name: Install Python packages
+        run: make -C python install
+      - name: Python lint
+        run: make -C python lint
+      - name: Python test
+        run: make -C python test
+      - name: Python format
+        run: make -C python format
+
+      # Build and run the Rust code
+      - name: Build Rust
+        run: make -C rust build
+      - name: Run Rust
+        run: make -C rust run
+
+      # Deploy or perform other actions if needed
+      - name: Deploy
+        run: make -C python deploy
