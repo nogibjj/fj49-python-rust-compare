@@ -17,18 +17,16 @@ jobs:
       - name: Install Python packages
         run: make python install
       - name: Python lint
-        run: make -C python lint
+        run: make python lint
       - name: Python test
-        run: make -C python test
+        run: make python test
       - name: Python format
-        run: make -C python format
+        run: make python format
 
       # Build and run the Rust code
       - name: Build Rust
-        run: make -C rust build
+        run: make rust build
       - name: Run Rust
-        run: make -C rust run
+        run: make rust run
 
-      # Deploy or perform other actions if needed
-      - name: Deploy
-        run: make -C python deploy
+  
