@@ -8,7 +8,7 @@ WORKDIR /usr/src/app/python
 COPY python/requirements.txt ./
 
 # Install any needed Python packages specified in requirements.txt
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir -r python/requirements.txt
 
 # Set the working directory for Rust in the container
 WORKDIR /usr/src/app/rust
