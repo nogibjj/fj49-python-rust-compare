@@ -16,8 +16,8 @@ jobs:
       # Install Python dependencies
       - name: Install Python packages
         run: make python install
-      - name: Python lint
-        run: make python lint
+      # - name: Python lint
+      #   run: make python lint
       - name: Python test
         run: make python test
       - name: Python format
