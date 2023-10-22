@@ -1,6 +1,7 @@
 import polars as pl
 import matplotlib.pyplot as plt
 
+print ("reading")
 
 # Reading the data
 def reader():
@@ -50,3 +51,4 @@ def viz():
     x = plt.title("Which artists had the most top tracks in the last few years?")
     # x = plt.show()
     return x
+
