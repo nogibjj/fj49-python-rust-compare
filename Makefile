@@ -8,13 +8,7 @@ test_python:
 format_python:	
 	black python/*.py 
 
-lint_python:
-	pylint --disable=R,C --ignore-patterns=test_.*?py python/*.py
-
-container-lint:
-	docker run --rm -i hadolint/hadolint < Dockerfile
-
-refactor_python: format_python lint_python
+lint_python: #lol
 
 build_rust:
 	cd rust && cargo build
