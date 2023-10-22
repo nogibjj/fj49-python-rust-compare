@@ -9,6 +9,7 @@ format_python:
 	black python/*.py 
 
 lint_python: #lol
+	pylint --disable=R,C 
 
 build_rust:
 	cd rust && cargo build
