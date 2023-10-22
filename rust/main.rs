@@ -4,7 +4,7 @@ use std::fs::File;
 
 fn main() -> Result<(), Box<dyn Error>> {
     // Open the CSV file
-    let file = File::open("https://raw.githubusercontent.com/MainakRepositor/Datasets/master/Cryptocurrency/bitcoin.csv")?;
+    let file = File::open("bitcoin.csv")?;
     let mut rdr = csv::Reader::from_reader(file);
 
     // Define a struct to represent a row in the CSV
