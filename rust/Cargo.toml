@@ -1,0 +1,12 @@
+[package]
+name = "Comparing-python-and-rust"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+csv = "1.0"   # A CSV library for Rust
+serde = { version = "1.0", features = ["derive"] }  # A serialization/deserialization library
+
+[[bin]]
+name = "main"
+path = "main.rs"
