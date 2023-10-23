@@ -5,8 +5,8 @@ install:
 test_python:
 	python -m pytest -vv --cov=python
 
-format_python:	
-	black python/*.py 
+# format_python:	
+# 	black python/*.py 
 
 lint_python: #lol
 	pylint --disable=R,C 
