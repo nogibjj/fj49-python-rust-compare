@@ -18,7 +18,8 @@ run_rust:
 	cd rust && cargo run
 
 test_rust:
-	cd rust && cargo test
+	@echo "Testing all projects with cargo"
+	./test.sh
 
 build_and_run: build_rust run_rust
 
