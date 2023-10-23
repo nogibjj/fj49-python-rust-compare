@@ -20,8 +20,8 @@ jobs:
       #   run: make python lint
       - name: Python test
         run: make python test
-      - name: Python format
-        run: make python format
+      # - name: Python format
+      #   run: make python format
 
       # Build and run the Rust code
       - name: Build Rust
