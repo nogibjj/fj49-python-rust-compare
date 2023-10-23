@@ -1,46 +1,26 @@
-# Python - Basic descriptive statistics using POLARS library
+# Python vs Rust Bitcoin CSV Processor
 
-[![CiCd](https://github.com/nogibjj/fj49_week3_ds_polars/actions/workflows/cicd.yml/badge.svg)](https://github.com/nogibjj/fj49_week3_ds_polars/actions/workflows/cicd.yml)
+## Overview
 
-# Spotify Data Analysis
+This project is a performance comparison between Python and Rust for processing a Bitcoin price dataset stored in a CSV file and extracting the top 10 closing prices. The goal is to evaluate the performance, resource usage, and coding convenience of both languages in this specific data processing task.
 
-This Python project analyzes data from the Spotify API, which is stored in a CSV file named `spotify.csv`. It provides insights into song lengths and identifies the top 10 artists with the most chart-topping hits between 2010 and 2022.
+## Introduction
 
-The csv file when read in polars looks like this:
+Choosing the right programming language for data processing tasks can significantly impact efficiency and performance. Python is known for its simplicity and rich ecosystem, while Rust offers performance and memory safety. This project analyzes their performance in processing a Bitcoin price dataset.
 
-<img width="672" alt="Screenshot 2023-09-17 at 11 51 47 PM" src="https://github.com/nogibjj/fj49_week3_ds_polars/assets/101464414/20eb5bb4-4c58-487e-b674-f0b1bc232d56">
+## Getting Started
 
+Before comparing Python and Rust, you need to set up your development environment. Here's how to get started:
 
+### Prerequisites
 
-## Features
+To run the code and benchmarks, you'll need to have the following installed:
 
-Descriptive statistics on song lengths (in milliseconds) to showcase the variation:
-
-- `Mean = 226033`
-- `Median = 221653`
-- `Mode = 236133`
-- `Std = 42063`
-
-Visualization of the top 10 artists with the most chart-topping hits.
-
-Here is the visualization:
-
-<img width="1580" alt="Screenshot 2023-09-10 at 7 11 13 PM" src="https://github.com/nogibjj/fj49_week2_ds/assets/101464414/cfc958df-4041-4c8f-be86-ab6885a69074">
+- Python 3.8 
+- Rust (ensure you have Cargo, Rust's package manager, installed)
 
 
+### RESULTS
 
-
-## CI/CD Integration
-
-This repository is integrated with a CI/CD template for automatic deployment of Python projects within a virtual environment. 
-
-You can find the template [here](https://github.com/farazjawedd/python-template-ids706). Feel free to use the template for other projects!
-
-## Development Environment
-
-- The repository includes a `.devcontainer` folder with configurations for the VS Code remote container development environment.
-- The `.github/workflows/cicd.yml` file defines the Continuous Integration (CI) workflow using GitHub Actions.
-
-Explore the code and data to gain insights into the world of music with Spotify and experiment with the polars library.
-
-
+After running the same script on Python and Rust, these were the results obtained:
+<img width="707" alt="Screenshot 2023-10-22 at 5 01 11 PM" src="https://github.com/nogibjj/fj49-python-rust-compare/assets/101464414/3bd3d78f-ffc2-4b28-be99-b87967aadd3a">
