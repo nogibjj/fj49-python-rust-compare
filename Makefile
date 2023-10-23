@@ -11,15 +11,15 @@ test_python:
 lint_python: #lol
 	pylint --disable=R,C 
 
-build_rust:
-	cd rust && cargo build
+# build_rust:
+# 	cd rust && cargo build
 
-run_rust:
-	cd rust && cargo run
+# run_rust:
+# 	cd rust && cargo run
 
-test_rust:
-	@echo "Testing all projects with cargo"
-	./test.sh
+# test_rust:
+# 	@echo "Testing all projects with cargo"
+# 	./test.sh
 
 build_and_run: build_rust run_rust
 

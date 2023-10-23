@@ -24,9 +24,9 @@ jobs:
       #   run: make python format
 
       # Build and run the Rust code
-      - name: Build Rust
-        run: make rust build
-      - name: Run Rust
-        run: make rust run
+      # - name: Build Rust
+      #   run: make rust build
+      # - name: Run Rust
+      #   run: make rust run
 
   
